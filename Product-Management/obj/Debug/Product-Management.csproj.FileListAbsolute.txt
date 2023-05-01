@@ -1,0 +1,8 @@
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\obj\Debug\Product-Management.csproj.AssemblyReference.cache
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\obj\Debug\Product-Management.csproj.SuggestedBindingRedirects.cache
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\obj\Debug\Product-Management.csproj.CoreCompileInputs.cache
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\bin\Debug\Product-Management.exe.config
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\bin\Debug\Product-Management.exe
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\bin\Debug\Product-Management.pdb
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\obj\Debug\Product-Management.exe
+C:\Users\uvur1\source\repos\Product-Management\Product-Management\obj\Debug\Product-Management.pdb
