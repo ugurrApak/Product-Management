@@ -104,39 +104,52 @@ namespace Product_Management.Proccesses
             Console.WriteLine("Update User (4)");
             Console.WriteLine("User list (5)");
             Console.WriteLine("Up Menu (0)");
-            Console.Write("Select Proccess ");
+            Console.Write("Select Proccess : ");
             char selected = Convert.ToChar(Console.ReadLine().Substring(0, 1));
             Console.Clear();
             switch (selected)
             {
                 case '1':
                     Add();
-                    Console.ReadKey();
                     break;
                 case '2':
                     Detail();
-                    Console.ReadKey();
                     break;
                 case '3':
                     Delete();
-                    Console.ReadKey();
                     break;
                 case '4':
                     Update();
-                    Console.ReadKey();
                     break;
                 case '5':
                     GetAll();
-                    Console.ReadKey();
                     break;
                 case '0':
                     Program.Main();
                     break;
                 default:
-                    Console.WriteLine("Please Try Again.");
-                    Console.ReadKey();
+                    Console.WriteLine("Incorrect Selection, Please Try Again.");
+                    UserProccess.Menu();
                     break;
             }
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("Up Menu (0)");
+            Console.Write("Quit (Q)");
+            selected = Convert.ToChar(Console.ReadLine().Substring(0, 1));
+            switch (selected)
+            {
+                case '0':
+                    Program.Main();
+                    break;
+                case 'Q':
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Incorrect Selection, Please Try Again.");
+                    UserProccess.Menu();
+                    break;
+            }
+            Console.ReadKey();
         }
     }
 }

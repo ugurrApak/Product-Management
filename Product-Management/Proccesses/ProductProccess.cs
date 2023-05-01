@@ -52,7 +52,7 @@ namespace Product_Management.Proccesses
                     Add();
                     break;
                 default:
-                    Console.WriteLine("Tanımsız işlem tekrar deneyiniz.");
+                    Console.WriteLine("Incorrect Selection, Please Try Again.");
                     break;
             }
         }

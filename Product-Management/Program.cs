@@ -22,22 +22,26 @@ namespace Product_Management
             Console.WriteLine("Category Proccess (2)");
             Console.WriteLine("User Proccess (3)");
             Console.WriteLine("Exit Program (0)");
-            Console.Write("Select Proccess :");
+            Console.Write("Select Proccess : ");
             char selected = Convert.ToChar(Console.ReadLine().Substring(0, 1));
-
+            Console.Clear();
             switch (selected)
             {
                 case '1':
                     ProductProccess.Menu();
                     break;
                 case '2':
-                    CategoryProccess.Menu(); 
+                    CategoryProccess.Menu();
                     break;
                 case '3':
                     UserProccess.Menu();
                     break;
+                case '0':
+                    Program.Main();
+                    break;
                 default:
-                    Console.WriteLine("Tanımsız işlem tekrar deneyiniz.");
+                    Console.WriteLine("Incorrect Selection, Please Try Again");
+                    Program.Main();
                     break;
             }
         }
