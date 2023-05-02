@@ -1,0 +1,7 @@
+/Users/derslik1-18/Documents/GitHub/CSharp-Softito-Egitim/Product-Management/Product-Management/bin/Release/Product-Management.exe.config
+/Users/derslik1-18/Documents/GitHub/CSharp-Softito-Egitim/Product-Management/Product-Management/bin/Release/Product-Management.exe
+/Users/derslik1-18/Documents/GitHub/CSharp-Softito-Egitim/Product-Management/Product-Management/bin/Release/Product-Management.pdb
+/Users/derslik1-18/Documents/GitHub/CSharp-Softito-Egitim/Product-Management/Product-Management/obj/Release/Product-Management.csproj.AssemblyReference.cache
+/Users/derslik1-18/Documents/GitHub/CSharp-Softito-Egitim/Product-Management/Product-Management/obj/Release/Product-Management.csproj.CoreCompileInputs.cache
+/Users/derslik1-18/Documents/GitHub/CSharp-Softito-Egitim/Product-Management/Product-Management/obj/Release/Product-Management.exe
+/Users/derslik1-18/Documents/GitHub/CSharp-Softito-Egitim/Product-Management/Product-Management/obj/Release/Product-Management.pdb

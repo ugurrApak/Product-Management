@@ -14,6 +14,10 @@ namespace Product_Management
         {
             UserRepository userRepository = new UserRepository();
             UserProccess userProccess = new UserProccess(userRepository);
+            ProductRepository productRepository = new ProductRepository();
+            ProductProccess productProccess = new ProductProccess(productRepository);
+            CategoryRepository categoryRepository = new CategoryRepository();
+            CategoryProccess categoryProccess = new CategoryProccess(categoryRepository);
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("---------- Proccess Menu ------------");
             Console.WriteLine("-------------------------------------");
@@ -37,7 +41,7 @@ namespace Product_Management
                     UserProccess.Menu();
                     break;
                 case '0':
-                    Program.Main();
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Incorrect Selection, Please Try Again");

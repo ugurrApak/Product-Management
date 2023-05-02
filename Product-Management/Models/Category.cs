@@ -9,5 +9,9 @@ namespace Product_Management.Models
 {
     internal class Category:CommonProp
     {
+        public Category(string name)
+        {
+            Name = name;
+        }
     }
 }
