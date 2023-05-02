@@ -12,6 +12,7 @@ namespace Product_Management.Repository
         bool Delete(uint id);
         T GetValue(uint id);
         bool Update(T entity);
+        bool Deactivate(uint id);
         List<T> GetAll();
     }
 }

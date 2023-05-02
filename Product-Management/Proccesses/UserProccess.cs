@@ -39,9 +39,9 @@ namespace Product_Management.Proccesses
             try
             {
                 User user = userRepository.GetValue(id);
-                Console.Write($"Name: {user.Name}");
-                Console.Write($"Surname: {user.Surname}");
-                Console.Write($"Email: {user.Email}");
+                Console.WriteLine($"Name: {user.Name}");
+                Console.WriteLine($"Surname: {user.Surname}");
+                Console.WriteLine($"Email: {user.Email}");
             }
             catch (NullReferenceException ex)
             {
@@ -62,17 +62,24 @@ namespace Product_Management.Proccesses
             Console.WriteLine("Update User.");
             Console.Write("Please Enter User Id.");
             uint id = Convert.ToUInt32(Console.ReadLine());
-            Console.Write("Name:");
+            Console.WriteLine("Name:");
             string name = Console.ReadLine();
-            Console.Write("Surname:");
+            Console.WriteLine("Surname:");
             string surname = Console.ReadLine();
-            Console.Write("Email:");
+            Console.WriteLine("Email:");
             string email = Console.ReadLine();
-            Console.Write("Password:");
+            Console.WriteLine("Password:");
             string password = Console.ReadLine();
             User user = new User(name,surname,email,password);
             user.Id= id;
             Console.WriteLine(userRepository.Update(user) ? "User Successfuly Updated" : "User Could Not Be Found");
+        }
+        public static void Deactivate()
+        {
+            Console.WriteLine("Disable User.");
+            Console.Write("Please Enter User id.");
+            uint id = Convert.ToUInt32(Console.ReadLine());
+            Console.WriteLine(userRepository.Deactivate(id) ? "User is Disabled." : "User Could Not be Found.");
         }
         public static void GetAll()
         {
@@ -102,7 +109,8 @@ namespace Product_Management.Proccesses
             Console.WriteLine("Detail User (2)");
             Console.WriteLine("Delete User (3)");
             Console.WriteLine("Update User (4)");
-            Console.WriteLine("User list (5)");
+            Console.WriteLine("Disable User (5)");
+            Console.WriteLine("User list (6)");
             Console.WriteLine("Up Menu (0)");
             Console.Write("Select Proccess : ");
             char selected = Convert.ToChar(Console.ReadLine().Substring(0, 1));
@@ -122,6 +130,9 @@ namespace Product_Management.Proccesses
                     Update();
                     break;
                 case '5':
+                    Deactivate();
+                    break;
+                case '6':
                     GetAll();
                     break;
                 case '0':
@@ -142,6 +153,9 @@ namespace Product_Management.Proccesses
                     Program.Main();
                     break;
                 case 'Q':
+                    Environment.Exit(0);
+                    break;
+                case 'q':
                     Environment.Exit(0);
                     break;
                 default:

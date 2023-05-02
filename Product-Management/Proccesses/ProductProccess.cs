@@ -50,7 +50,6 @@ namespace Product_Management.Proccesses
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Product Could Not be Found.");
-                throw;
             }
         }
         public static void Delete()
@@ -77,7 +76,14 @@ namespace Product_Management.Proccesses
             double price = Convert.ToDouble(Console.ReadLine());
             Product product = new Product(name, description, categoryId, stock, price);
             product.Id = id;
-            Console.WriteLine(productRepository.Update(product) ? "User Successfuly Updated." : "User Could Not be Found.");
+            Console.WriteLine(productRepository.Update(product) ? "Product Successfuly Updated." : "Product Could Not be Found.");
+        }
+        public static void Deactivate()
+        {
+            Console.WriteLine("Disable Product.");
+            Console.Write("Please Enter Product id.");
+            uint id = Convert.ToUInt32(Console.ReadLine());
+            Console.WriteLine(productRepository.Deactivate(id) ? "Product is disabled." : "Product Could Not be Found.");
         }
         public static void GetAll()
         {
@@ -108,7 +114,8 @@ namespace Product_Management.Proccesses
             Console.WriteLine("Detail Product (2)");
             Console.WriteLine("Delete Product (3)");
             Console.WriteLine("Update Product (4)");
-            Console.WriteLine("Product list (5)");
+            Console.WriteLine("Disable Product (5)");
+            Console.WriteLine("Product list (6)");
             Console.WriteLine("Up Menu (0)");
             Console.Write("Select Proccess");
             char selected = Convert.ToChar(Console.ReadLine().Substring(0, 1));
@@ -128,6 +135,9 @@ namespace Product_Management.Proccesses
                     Update();
                     break;
                 case '5':
+                    Deactivate();
+                    break;
+                case '6':
                     GetAll();
                     break;
                 case '0':
@@ -148,6 +158,9 @@ namespace Product_Management.Proccesses
                     Program.Main();
                     break;
                 case 'Q':
+                    Environment.Exit(0);
+                    break;
+                case 'q':
                     Environment.Exit(0);
                     break;
                 default:

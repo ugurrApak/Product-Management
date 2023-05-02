@@ -18,6 +18,7 @@ namespace Product_Management.Models
             Surname = surname;
             Email = email;
             Password = password;
+            IsStatus= true;
         }
     }
 }

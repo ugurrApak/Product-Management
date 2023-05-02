@@ -31,13 +31,12 @@ namespace Product_Management.Proccesses
             try
             {
                 Category category = categoryRepository.GetValue(id);
-                Console.Write($"Name: {category.Name}");
+                Console.WriteLine($"Name: {category.Name}");
             }
             catch (NullReferenceException ex)
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Category Could Not be Found.");
-                throw;
             }
         }
         public static void Delete()
@@ -57,6 +56,13 @@ namespace Product_Management.Proccesses
             Category category = new Category(name);
             category.Id = id;
             Console.WriteLine(categoryRepository.Update(category) ? "Category Successfuly Updated." : "Category Could Not be Found.");
+        }
+        public static void Deactivate()
+        {
+            Console.WriteLine("Disable Category.");
+            Console.Write("Please Enter Category id");
+            uint id = Convert.ToUInt32(Console.ReadLine());
+            Console.WriteLine(categoryRepository.Deactivate(id) ? "Category is disabled." : "Category Could Not be Found.");
         }
         public static void GetAll()
         {
@@ -83,7 +89,8 @@ namespace Product_Management.Proccesses
             Console.WriteLine("Detail Category (2)");
             Console.WriteLine("Delete Category (3)");
             Console.WriteLine("Update Category (4)");
-            Console.WriteLine("Category list (5)");
+            Console.WriteLine("Disable Category (5)");
+            Console.WriteLine("Category list (6)");
             Console.WriteLine("Up Menu (0)");
             Console.Write("Select Proccess : ");
             char selected = Convert.ToChar(Console.ReadLine().Substring(0, 1));
@@ -103,6 +110,9 @@ namespace Product_Management.Proccesses
                     Update();
                     break;
                 case '5':
+                    Deactivate();
+                    break;
+                case '6':
                     GetAll();
                     break;
                 case '0':
@@ -123,6 +133,9 @@ namespace Product_Management.Proccesses
                     Program.Main();
                     break;
                 case 'Q':
+                    Environment.Exit(0);
+                    break;
+                case 'q':
                     Environment.Exit(0);
                     break;
                 default:

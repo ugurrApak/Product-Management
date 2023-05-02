@@ -12,6 +12,7 @@ namespace Product_Management.Models
         public Category(string name)
         {
             Name = name;
+            IsStatus = true;
         }
     }
 }

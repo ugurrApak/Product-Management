@@ -46,7 +46,17 @@ namespace Product_Management.Repository
         {
             return _products.FirstOrDefault(x => x.Id == id);
         }
-
+        public bool Deactivate(uint id)
+        {
+            bool result = false;
+            Product product = _products.FirstOrDefault(x => x.Id == id);
+            if (product != null)
+            {
+                result = true;
+                product.IsStatus = false;
+            }
+            return result;
+        }
         public bool Update(Product entity)
         {
             bool result = false;

@@ -21,6 +21,7 @@ namespace Product_Management.Models
             CategoryId = categoryId;
             Stock = stock;
             Price = price;
+            IsStatus= true;
         }
     }
 }

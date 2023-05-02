@@ -46,6 +46,17 @@ namespace Product_Management.Repository
         {
             return _categories.FirstOrDefault(x => x.Id == id);
         }
+        public bool Deactivate(uint id)
+        {
+            bool result = false;
+            Category category = _categories.FirstOrDefault(x => x.Id == id);
+            if(category != null)
+            {
+                result = true;
+                category.IsStatus = false;
+            }
+            return result;
+        }
 
         public bool Update(Category entity)
         {
